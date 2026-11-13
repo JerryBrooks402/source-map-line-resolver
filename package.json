@@ -1,6 +1,6 @@
 {
   "name": "source-map-line-resolver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Resolves transpiled stack traces to original sources via source maps.",
   "type": "module",
   "main": "src/index.js",
