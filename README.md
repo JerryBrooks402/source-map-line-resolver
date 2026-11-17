@@ -35,3 +35,10 @@ Creates a resolver from a parsed source map object. The object must have `mappin
 ### `resolver.resolve(generatedLine)`
 
 Takes a 1-based generated line number and returns an object `{ source, line, column }` with the original source file, 1-based line, and 1-based column, or `null` if the line cannot be resolved.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
